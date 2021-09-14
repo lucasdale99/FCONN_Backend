@@ -12,3 +12,6 @@ You need to add your IP address to connect to the DB otherwise you'll get a
     connection <monitor> to ip closed at Timeout error.
 
 This just means that your IP isn't allowed to connect. This is something you only do in development. 
+
+To start up the backend server
+nodemon server
