@@ -15,19 +15,16 @@ This just means that your IP isn't allowed to connect. This is something you onl
 
 To start up the backend server
 -Make sure to install all the npm packages in the package.json under dependencies.
--If you have issues with Nodemon run the following below.
 
 On Mac
-Try installing Nodemon globally:
-npm uninstall nodemon
+Install Nodemon globally:
 sudo npm install -g --force nodemon
 
 Then run:
 sudo nodemon server
 
 On Windows run in administrator mode:
-Try installing Nodemon globally and run:
+Install nodemon globally and run:
 
-npm uninstall nodemon
 npm install -g --force nodemon
 nodemon server
