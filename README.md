@@ -1,30 +1,24 @@
 # FCONN_Backend
 This is the Node, Express backend that connects to the MongoDB for the FCONN project.
 
-In order to start up this project locally:
-1. Open up bash terminal.
-2. Type in 'nodemon server'
-3. This starts watching on  https://localhost:5000
+### Installing the dependencies:
+* Open the FCONN_Backend folder in the terminal.
+* Type "npm install" without the quotations.
 
-Don't Forget
-You need to add your IP address to connect to the DB otherwise you'll get a 
+### Next we are going to install Nodemon globally.
+* Windows
+    * Open the terminal (Command prompt).
+    * Type "npm install -g nodemon --force nodemon" without the quotations
+* Mac
+    * Open the terminal.
+    * Type "sudo npm install -g --force nodemon"
 
-    connection <monitor> to ip closed at Timeout error.
+### Setting up the .env file
+* In VS Code open up the FCONN_Backend folder.
+* In the explorer tab (ctrl+shift+e) click the add file button, and name the file ".env" without the quotations. 
+* In this new file add the info provided in the Discord. 
 
-This just means that your IP isn't allowed to connect. This is something you only do in development. 
-
-To start up the backend server
--Make sure to install all the npm packages in the package.json under dependencies.
-
-On Mac
-Install Nodemon globally:
-sudo npm install -g --force nodemon
-
-Then run:
-sudo nodemon server
-
-On Windows run in administrator mode:
-Install nodemon globally and run:
-
-npm install -g --force nodemon
-nodemon server
+### In order to start up the backend locally:
+* Open up FCONN_Backend in the terminal.
+* Type in "nodemon server" without the quotations.
+* This starts watching on https://localhost:5000
