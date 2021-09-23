@@ -26,5 +26,8 @@ sudo nodemon server
 On Windows run in administrator mode:
 Install nodemon globally and run:
 
-npm install -g --force nodemon
-nodemon server
+1. npm install
+
+2. npm install -g --force nodemon
+
+3. nodemon server
