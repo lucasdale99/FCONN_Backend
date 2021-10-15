@@ -1,6 +1,7 @@
 import express  from "express";
-import RestaurantsController from "./restaurants.controller.js";
-import ReviewsController from "./reviews.controller.js";
+import RestaurantsController from "../controllers/restaurants";
+import ReviewsController from "../controllers/reviews";
+import authenticate from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -11,8 +12,8 @@ router.route("/cuisines").get(RestaurantsController.apiGetRestaurantCuisines)
 
 router
     .route("/review")
-    .post(ReviewsController.apiPostReview)
-    .put(ReviewsController.apiUpdateReview)
-    .delete(ReviewsController.apiDeleteReview)
+    .post(authenticate, ReviewsController.apiPostReview)
+    .put(authenticate, ReviewsController.apiUpdateReview)
+    .delete(authenticate, ReviewsController.apiDeleteReview)
 
 export default router
