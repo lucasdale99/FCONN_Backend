@@ -1,6 +1,6 @@
 import express  from "express";
-import RestaurantsController from "../controllers/restaurants";
-import ReviewsController from "../controllers/reviews";
+import RestaurantsController from "../controllers/restaurants.js";
+import ReviewsController from "../controllers/reviews.js";
 import authenticate from "../middleware/auth.js";
 
 const router = express.Router();

@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import restaurants from "./routes/restaurants.route";
-import userRoutes from "./routes/users.route";
+import restaurants from "./routes/restaurants.js";
+import userRoutes from "./routes/users.js";
 
 const app = express()
 
@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use("/api/v1/restaurants", restaurants)
-app.use('/user', userRoutes);
+app.use('/users', userRoutes);
 app.use("*", (req, res) => res.status(404).json({error: "Not Found"}))
 
 export default app
