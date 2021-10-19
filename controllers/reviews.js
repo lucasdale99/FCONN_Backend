@@ -2,6 +2,9 @@ import ReviewsDAO from "../dao/reviewsDAO.js"
 export default class ReviewsController {
     static async apiPostReview(req, res, next) {
         try{
+
+            if(!req.userId) return res.json({ message: 'Unauthenticated' });
+
             const restaurantId = req.body.restaurant_id
             const review = req.body.text
             const userInfo = {
@@ -26,6 +29,9 @@ export default class ReviewsController {
 
     static async apiUpdateReview(req, res, next) {
         try{
+
+            if(!req.userId) return res.json({ message: 'Unauthenticated' });
+
             const reviewId = req.body.review_id
             const text = req.body.text
             const date = new Date()
@@ -56,6 +62,9 @@ export default class ReviewsController {
 
     static async apiDeleteReview(req, res, next) {
         try {
+
+            if(!req.userId) return res.json({ message: 'Unauthenticated' });
+
             const reviewId = req.query.id
             //In a production version, don't grab anything from the body like this
             const userId = req.body.user_id

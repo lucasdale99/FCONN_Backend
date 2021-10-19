@@ -1,8 +1,10 @@
 import app from "./server.js"
 import mongodb from "mongodb"
+import mongoose from "mongoose"
 import dotenv from "dotenv"
 import RestaurantsDAO from "./dao/restaurantsDAO.js"
 import ReviewsDAO from "./dao/reviewsDAO.js"
+
 dotenv.config()
 const MongoClient = mongodb.MongoClient
 
@@ -27,3 +29,5 @@ MongoClient.connect(
         console.log(`Listening on port ${port}`);
     })
 })
+
+mongoose.connect(process.env.FCONN_DB_URI);
