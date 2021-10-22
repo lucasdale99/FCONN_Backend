@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import userRoutes from "./routes/user.js";
+import postRoutes from "./routes/posts.js";
 
 dotenv.config()
 const app = express()
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }))
 //apply middleware
 app.use(cors())
 
-//app.use("/api/v1/restaurants", restaurants)
+app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 
 const PORT = process.env.PORT || 8000
