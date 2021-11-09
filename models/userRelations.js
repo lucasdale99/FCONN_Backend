@@ -12,17 +12,15 @@ When setting the user IDs, the IDs should be compared lexicographically (firstUs
 This ensures only one record of the relationship exist.
 */
 
-const schemaOptions = {
-    timestamps : {createdAt: 'relationship_requested_at', updatedAt: 'last_updated_at'}
-}
-
-const postSchema = mongoose.Schema({
+const relationsSchema = mongoose.Schema({
     firstUserID: {type: mongoose.Schema.Types.ObjectId, required: true},
     secondUserID: {type: mongoose.Schema.Types.ObjectId, required: true},
     type: String,
     creator: {type: mongoose.Schema.Types.ObjectId},
-}, schemaOptions)
+    createdAt: {type: Date, default: new Date()},
+    updatedAt: {type: Date, default: new Date()},
+})
 
-var AddFriend = mongoose.model('AddFriend', postSchema);
+var UserRelations = mongoose.model('setRelationship', relationsSchema);
 
-export default AddFriend;
+export default UserRelations;
