@@ -15,7 +15,6 @@ This ensures only one record of the relationship exist.
 const relationsSchema = mongoose.Schema({
     firstUserID: {type: mongoose.Schema.Types.ObjectId, required: true},
     secondUserID: {type: mongoose.Schema.Types.ObjectId, required: true},
-    type: String,
     creator: {type: mongoose.Schema.Types.ObjectId},
     createdAt: {type: Date, default: new Date()},
     updatedAt: {type: Date, default: new Date()},
