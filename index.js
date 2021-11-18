@@ -19,7 +19,7 @@ app.use('/posts', postRoutes);
 app.use('/user', userRoutes);
 //app.use('/restaurants', restaurantRoutes);
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 80
 const CONNECTION_URL = process.env.FCONN_DB_URI;
 
 mongoose.connect(
