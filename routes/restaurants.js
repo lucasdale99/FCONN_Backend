@@ -3,4 +3,4 @@ import { getRestaurants } from '../controllers/restaurants';
 const router = express.Router();
 
 
-//router.get('/restaurants', getRestaurants);
+router.get('/restaurants', getRestaurants);

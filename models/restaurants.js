@@ -9,6 +9,6 @@ const restaurantSchema = mongoose.Schema({
     phone: {type: String, required: false}
 })
 
-var Restaurant = mongoose.model('Restaurant', restaurantSchema);
+var Restaurants = mongoose.model('Restaurant', restaurantSchema);
 
-export default Restaurant;
+export default Restaurants;

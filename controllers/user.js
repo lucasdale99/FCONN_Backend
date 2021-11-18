@@ -4,7 +4,8 @@ import dotenv from 'dotenv';
 import UserModal from '../models/user.js';
 dotenv.config();
 const secret = process.env.JWT_KEY;
-//const secret = 'mysecret';
+
+//Potentially need to add forgot password logic here
 
 export const signin = async (req, res) => {
     const { email, password } = req.body;
