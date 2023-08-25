@@ -1,6 +1,5 @@
 # FCONN_Backend
 * This is the Node, Express backend that connects to the MongoDB for the FCONN project.
-* You will need access to the MongoDB database.
 * Link to Front End https://github.com/lucasdale99/FCONN
 
 # MongoDB Atlas Tutorial
